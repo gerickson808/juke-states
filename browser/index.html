@@ -6,15 +6,19 @@
     <link href="/bootstrap-dark.css" rel="stylesheet" />
     <link href="/style.css" rel="stylesheet" />
     <script src="/angular/angular.js" defer></script>
+    <script src="/angular-ui-router/release/angular-ui-router.min.js" defer></script>
     <script src="/js/module.js" defer></script>
     <script src="/js/album/album.controllers.js" defer></script>
     <script src="/js/album/album.factory.js" defer></script>
+    <script src="/js/album/album.states.js" defer></script>
     <script src="/js/player/player.controller.js" defer></script>
     <script src="/js/player/player.factory.js" defer></script>
     <script src="/js/sidebar/sidebar.controller.js" defer></script>
     <script src="/js/artist/artist.controllers.js" defer></script>
     <script src="/js/artist/artist.factory.js" defer></script>
     <script src="/js/song/song.factory.js" defer></script>
+
+
   </head>
   <body ng-app="juke">
     <div id="main" class="container-fluid">
@@ -24,7 +28,7 @@
           <img src="juke.svg" class="logo">
           <section>
             <h4 class="playlist-item active">
-              <a href="#" ng-click="viewAlbums()">ALBUMS</a>
+              <a ui-sref="allAlbums">ALBUMS</a>
             </h4>
           </section>
           <section>
@@ -34,9 +38,9 @@
           </section>
         </sidebar>
       </div>
-
       <div class="col-xs-10">
-
+      <ui-view></ui-view>
+<!-- 
         <div ng-controller="AlbumsCtrl" ng-show="showMe">
           <h3>Albums</h3>
           <div class="row">
@@ -131,7 +135,7 @@
               </tbody>
             </table>
         </div>
-
+ -->
       </div>
 
       <footer>
