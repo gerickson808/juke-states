@@ -5,3 +5,11 @@ juke.config(function($stateProvider){
 		controller: 'AlbumsCtrl'
 	});
 });
+
+juke.config(function($stateProvider){
+	$stateProvider.state('oneAlbum',{
+		url:'/albums/:albumid',
+		templateUrl:'/js/album/album.view.html',
+		controller: 'AlbumCtrl'
+	});
+});
