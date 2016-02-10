@@ -17,7 +17,13 @@ juke.config(function($stateProvider){
 juke.config(function($stateProvider){
 	$stateProvider.state('oneArtist.Albums',{
 		url:'/artist/:artistid/albums',
-		templateUrl:'/js/artist/albums.view.html',
+		templateUrl:'/js/album/albums.view.html',
 	});
 });
 
+juke.config(function($stateProvider){
+	$stateProvider.state('oneArtist.Songs',{
+		url:'/artist/:artistid/songs',
+		templateUrl:'/js/artist/songs.view.html',
+	});
+});

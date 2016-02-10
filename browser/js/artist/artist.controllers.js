@@ -29,6 +29,8 @@ juke.controller('ArtistCtrl', function ($scope, $log, ArtistFactory, PlayerFacto
   ArtistFactory.fetchById($stateParams.artistid)
   .then(artist => {
     $scope.artist = artist;
+    $scope.albums = artist.albums;
+    $scope.songs = artist.songs;
   })
   .catch($log.error);
 
