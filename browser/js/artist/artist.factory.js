@@ -10,6 +10,7 @@ juke.factory('ArtistFactory', function ($http, $q, AlbumFactory, SongFactory) {
   };
 
   ArtistFactory.fetchById = function (id) {
+    console.log('artistid', id);
     var url = '/api/artists/' + id;
     return $q.all([$http.get(url), $http.get(url + '/songs'), $http.get(url + '/albums')])
     .then( responses => responses.map(res => res.data) )
