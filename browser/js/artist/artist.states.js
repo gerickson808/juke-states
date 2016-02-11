@@ -7,8 +7,10 @@ juke.config(function($stateProvider){
 });
 
 juke.config(function($stateProvider){
+	// $urlRouterProvider.when('/artist/:artistid', '/artist/:artistid/albums');
 	$stateProvider.state('oneArtist',{
 		url:'/artist/:artistid',
+		abstract:true,
 		templateUrl:'/js/artist/artist.view.html',
 		controller: 'ArtistCtrl'
 	});
